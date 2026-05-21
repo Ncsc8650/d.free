@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>d.free - Legal Video Downloader</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace" aria-labelledby="app-title">
+        <div class="intro">
+          <p class="eyebrow">d.free</p>
+          <h1 id="app-title">ดาวน์โหลดวิดีโอที่คุณมีสิทธิ์ใช้งาน</h1>
+          <p>
+            วางลิงก์ไฟล์วิดีโอโดยตรง เช่น .mp4, .webm, .mov หรือ .m4v
+            แล้วกดดาวน์โหลดลงเครื่องได้ทันที
+          </p>
+        </div>
+
+        <form class="tool" id="download-form">
+          <label for="video-url">ลิงก์วิดีโอ</label>
+          <div class="url-row">
+            <input
+              id="video-url"
+              name="video-url"
+              type="url"
+              inputmode="url"
+              autocomplete="url"
+              placeholder="https://example.com/my-video.mp4"
+              required
+            />
+            <button type="submit">ตรวจลิงก์</button>
+          </div>
+          <p class="hint">
+            ระบบนี้ไม่ดึงไฟล์จาก YouTube, TikTok หรือ Instagram ของผู้อื่น
+            เพื่อให้ใช้งานถูกต้องตามสิทธิ์และเงื่อนไขแพลตฟอร์ม
+          </p>
+        </form>
+
+        <section class="result" id="result" hidden aria-live="polite">
+          <div>
+            <p class="status" id="status-text"></p>
+            <p class="file-name" id="file-name"></p>
+          </div>
+          <a class="download-button" id="download-link" href="#" download>
+            ดาวน์โหลด
+          </a>
+        </section>
+      </section>
+
+      <section class="policy" aria-labelledby="policy-title">
+        <h2 id="policy-title">ใช้งานแบบถูกลิขสิทธิ์</h2>
+        <div class="policy-grid">
+          <article>
+            <h3>ใช้ได้</h3>
+            <p>วิดีโอของคุณเอง ไฟล์ตรงจากเซิร์ฟเวอร์ของคุณ หรือไฟล์ที่เจ้าของอนุญาตให้ดาวน์โหลด</p>
+          </article>
+          <article>
+            <h3>แนะนำ</h3>
+            <p>ถ้าเป็น YouTube, TikTok หรือ Instagram ให้ใช้ปุ่มดาวน์โหลดหรือเครื่องมือ export ทางการของแพลตฟอร์มนั้น</p>
+          </article>
+          <article>
+            <h3>ไม่รองรับ</h3>
+            <p>การแยกไฟล์หรือหลบข้อจำกัดจากแพลตฟอร์มของผู้อื่นโดยไม่ได้รับอนุญาต</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
